@@ -548,6 +548,7 @@ def create_agent(api_key, max_iter=15):
     """Cria e configura o agente LangChain"""
     
     # Configura a API key
+    api_key = st.secrets["OPENAI_API_KEY"]
     os.environ["OPENAI_API_KEY"] = api_key
     
     # Modelo OpenAI
