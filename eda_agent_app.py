@@ -610,6 +610,7 @@ def create_agent(api_key, max_iter=15):
         ),
         Tool(
             name="python_repl",
+            func=st.session_state.python_repl.run,
             description="""Executa código Python para análise de dados e visualizações.
             O DataFrame está disponível como 'df' (já carregado e pronto para uso).
             
