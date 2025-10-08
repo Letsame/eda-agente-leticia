@@ -684,16 +684,18 @@ st.markdown("""
 
 st.divider()
 
+api_key = st.secrets["OPENAI_API_KEY"]
+
 # Sidebar
 with st.sidebar:
     st.header("⚙️ Configurações")
     
     # API Key
-    api_key = st.text_input(
-        "OpenAI API Key",
-        type="password",
-        help="Cole sua chave API da OpenAI aqui"
-    )
+    # api_key = st.text_input(
+    #     "OpenAI API Key",
+    #     type="password",
+    #     help="Cole sua chave API da OpenAI aqui"
+    # )
     
     if api_key:
         st.success("✅ API Key configurada!")
